@@ -23,4 +23,15 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     spinner.style.display = "none";
     return;
   }
+ if (password.length < 6) {
+    alert("Password must be at least 6 characters.");
+    spinner.style.display = "none";
+    return;
+  }
+
+  if (document.getElementById("rememberMe").checked) {
+    localStorage.setItem("rememberedEmail", email);
+  } else {
+    localStorage.removeItem("rememberedEmail");
+  }
 
