@@ -16,4 +16,11 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
   const spinner = document.getElementById("spinner");
+ spinner.style.display = "block";
+
+  if (!email || !password) {
+    alert("Please fill in all fields.");
+    spinner.style.display = "none";
+    return;
+  }
 
