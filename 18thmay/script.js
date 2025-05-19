@@ -34,4 +34,16 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   } else {
     localStorage.removeItem("rememberedEmail");
   }
+setTimeout(() => {
+    spinner.style.display = "none";
+    window.location.href = "menu.html";
+  }, 1500);
+});
 
+window.addEventListener("DOMContentLoaded", () => {
+  const savedEmail = localStorage.getItem("rememberedEmail");
+  if (savedEmail) {
+    document.getElementById("email").value = savedEmail;
+    document.getElementById("rememberMe").checked = true;
+  }
+});
