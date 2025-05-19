@@ -84,4 +84,19 @@ form input {
   cursor: pointer;
   color: #555;
 }
+remember-me {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.remember-me input {
+  margin-right: 5px;
+}
+
+.form-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
 
